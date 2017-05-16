@@ -1,12 +1,25 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
-10.times do |x|
-    User.create(username: "awesomeStudent#{x}", email: "student#{x}@gmail.com", password: "password", password_confirmation: "password")
-end
-p "Test users created"
+User.create!([
+  {id: 1, email: "heyitsdanikelley@gmail.com", password: "password", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 6, current_sign_in_at: "2017-05-10 19:53:43", last_sign_in_at: "2017-05-10 18:42:22", current_sign_in_ip: "::1", last_sign_in_ip: "::1", username: "DanielleKelley", bio: "I am awesome.", created_at: "2017-05-08 19:03:13", updated_at: "2017-05-10 19:53:43", school: nil, work: nil},
+  {id: 2, email: "student0@gmail.com", password: "password", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 0, current_sign_in_at: nil, last_sign_in_at: nil, current_sign_in_ip: nil, last_sign_in_ip: nil, username: "awesomeStudent0", bio: nil, created_at: "2017-05-09 17:47:41", updated_at: "2017-05-09 17:47:41", school: nil, work: nil},
+  {id: 3, email: "student1@gmail.com", password: "password", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 3, current_sign_in_at: "2017-05-10 19:53:03", last_sign_in_at: "2017-05-10 18:42:05", current_sign_in_ip: "::1", last_sign_in_ip: "::1", username: "awesomeStudent1", bio: nil, created_at: "2017-05-09 17:47:41", updated_at: "2017-05-10 19:53:03", school: nil, work: nil},
+  {id: 4, email: "student2@gmail.com", password: "password", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 0, current_sign_in_at: nil, last_sign_in_at: nil, current_sign_in_ip: nil, last_sign_in_ip: nil, username: "awesomeStudent2", bio: nil, created_at: "2017-05-09 17:47:41", updated_at: "2017-05-09 17:47:41", school: nil, work: nil},
+  {id: 5, email: "student3@gmail.com", password: "password", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 0, current_sign_in_at: nil, last_sign_in_at: nil, current_sign_in_ip: nil, last_sign_in_ip: nil, username: "awesomeStudent3", bio: nil, created_at: "2017-05-09 17:47:41", updated_at: "2017-05-09 17:47:41", school: nil, work: nil},
+  {id: 6, email: "student4@gmail.com", password: "password", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 0, current_sign_in_at: nil, last_sign_in_at: nil, current_sign_in_ip: nil, last_sign_in_ip: nil, username: "awesomeStudent4", bio: nil, created_at: "2017-05-09 17:47:41", updated_at: "2017-05-09 17:47:41", school: nil, work: nil},
+  {id: 7, email: "student5@gmail.com", password: "password", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 0, current_sign_in_at: nil, last_sign_in_at: nil, current_sign_in_ip: nil, last_sign_in_ip: nil, username: "awesomeStudent5", bio: nil, created_at: "2017-05-09 17:47:42", updated_at: "2017-05-09 17:47:42", school: nil, work: nil},
+  {id: 8, email: "student6@gmail.com", password: "password", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 0, current_sign_in_at: nil, last_sign_in_at: nil, current_sign_in_ip: nil, last_sign_in_ip: nil, username: "awesomeStudent6", bio: nil, created_at: "2017-05-09 17:47:42", updated_at: "2017-05-09 17:47:42", school: nil, work: nil},
+  {id: 9, email: "student7@gmail.com", password: "password", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 0, current_sign_in_at: nil, last_sign_in_at: nil, current_sign_in_ip: nil, last_sign_in_ip: nil, username: "awesomeStudent7", bio: nil, created_at: "2017-05-09 17:47:42", updated_at: "2017-05-09 17:47:42", school: nil, work: nil},
+  {id: 10, email: "student8@gmail.com", password: "password", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 0, current_sign_in_at: nil, last_sign_in_at: nil, current_sign_in_ip: nil, last_sign_in_ip: nil, username: "awesomeStudent8", bio: nil, created_at: "2017-05-09 17:47:42", updated_at: "2017-05-09 17:47:42", school: nil, work: nil},
+  {id: 11, email: "student9@gmail.com", password: "password", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 0, current_sign_in_at: nil, last_sign_in_at: nil, current_sign_in_ip: nil, last_sign_in_ip: nil, username: "awesomeStudent9", bio: nil, created_at: "2017-05-09 17:47:42", updated_at: "2017-05-09 17:47:42", school: nil, work: nil}
+])
+Friendship.create!([
+  {id: 2, user_id: 3, friend_id: 9, state: "active", friended_at: "2017-05-09 18:38:17", created_at: "2017-05-09 18:34:15", updated_at: "2017-05-09 18:38:17"},
+  {id: 4, user_id: 1, friend_id: 2, state: "pending", friended_at: nil, created_at: "2017-05-10 17:37:22", updated_at: "2017-05-10 17:37:22"},
+  {id: 6, user_id: 3, friend_id: 1, state: "active", friended_at: "2017-05-10 18:43:12", created_at: "2017-05-10 18:42:10", updated_at: "2017-05-10 18:43:12"},
+  {id: 7, user_id: 1, friend_id: 4, state: "pending", friended_at: nil, created_at: "2017-05-10 19:52:35", updated_at: "2017-05-10 19:52:35"},
+  {id: 8, user_id: 1, friend_id: 5, state: "pending", friended_at: nil, created_at: "2017-05-10 19:52:40", updated_at: "2017-05-10 19:52:40"},
+  {id: 9, user_id: 3, friend_id: 6, state: "pending", friended_at: nil, created_at: "2017-05-10 19:53:12", updated_at: "2017-05-10 19:53:12"}
+])
+Post.create!([
+  {id: 1, user_id: 1, content: "First Test post! THIS POST HAS BEEN UPDATED!", created_at: "2017-05-11 18:10:02", updated_at: "2017-05-11 18:25:53"},
+  {id: 2, user_id: 1, content: "Second test 1,2,3", created_at: "2017-05-11 18:34:09", updated_at: "2017-05-11 18:34:09"}
+])
